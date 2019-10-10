@@ -1,0 +1,238 @@
+/* css reset */
+*{
+    margin:0;
+    padding:0;
+}
+
+/* border box fix */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Global Styles
+------------------------------ */
+body{
+  text-align: center;
+  background-image: linear-gradient(rgb(50,205,50),rgb(152,251,152));
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+a{
+  text-decoration:none;
+}
+h1{
+  margin: 20px 40px 5px 40px;
+  color: red;
+  font-size: 3rem;
+}
+h4{
+  color: green;
+}
+.yellow{
+  color: yellow;
+}
+.pink{
+  color: rgb(255,105,180);
+}
+.red{
+  color: red;
+  width: 40px;
+  height: 40px;
+}
+.black{
+    color: black;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+}
+.blue{
+  background-color: blue;
+  color: #fff;
+}
+.icon{
+  font-size: 5rem;
+}
+#gameBox{
+  height: 80vh;
+  position: relative;
+}
+.bodyBox{
+  width: 100%;
+  height: 100%;
+}
+.cursorBox{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+}
+.ansBox{
+  width: 45px;
+  height: 45px;
+  background-color: blue;
+  position: absolute;
+}
+.sumBox{
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+/* Main Header
+------------------------------------*/
+header{
+  margin-bottom: 2rem;
+}
+
+/* level section
+---------------------------*/
+.roundButton{
+  margin: 1rem;
+  border: 0.5rem solid white;
+  padding: 0.6rem 1.8rem;
+  border-radius: 100px;
+}
+/* start section
+---------------------------*/
+
+/* icon section
+---------------------------*/
+
+/* subpage Header
+------------------------------------*/
+.subHerder{
+  margin: 0 0 20px 0;
+  padding: 0.5rem;
+  text-align: left;
+  background-color: rgb(0,100,0);
+}
+
+/* subpage infomation box
+------------------------------------*/
+#infoBox{
+  margin: 4.5rem;
+  padding: 0.6rem 1.8rem;
+  border-radius: 15px;
+  border-style: outset;
+  border: 1rem solid rgb(102,205,170);
+  background-color: rgb(50,205,50);
+}
+.thinBorder{
+  border: 1px solid rgb(0,100,0);
+  display: block;
+  margin: 5px;
+}
+
+#name{
+  margin: 5px 55% 0 15%;
+}
+#play{
+  margin: 12% 40% 12% 40%;
+  padding: 1rem 1rem;
+  font-size: 2.5rem;
+}
+a.blue:hover{
+  background-color: rgb(64,224,208);
+}
+.subIconTop{
+  display: grid;
+  grid-template-columns: 1fr 50px;
+  font-size: 9rem;
+  text-align: right;
+  margin: -5rem -2rem -3rem 1rem;
+  padding: 1rem 1rem;
+}
+.subIconBot{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  font-size: 9rem;
+  text-align: left;
+  margin: -8rem -1rem 1rem 1rem;
+  padding: 1rem 1rem;
+}
+
+
+/* media quaries
+------------------------------------*/
+
+/*apply the width 768 greater, desktop*/
+@media all and (min-width:846px){
+    body{
+        width:90%;
+        min-width:856px;
+    }
+    #level {
+      margin-left: 10%;
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+    }
+    #button{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+    }
+    .le{
+      display:inline-block; /*avoid overlaping*/
+      margin: 15px 2px;
+      padding : 1rem 1rem;/*add space between tabs*/
+    }
+    .starRu{
+      display:inline-block; /*avoid overlaping*/
+      margin: 15px 2px;
+      padding : 1rem 1rem;/*add space between tabs*/
+    }
+    .icon{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr;
+      margin: 15px 2px;
+      padding : 1rem 1rem;
+    }
+}
+@media all and (min-width: 500px) and (max-width: 845px){
+  body {
+
+    width: 100%;
+    max-width: 850px;
+    min-width: 500px;
+    font-size: 80%;
+  }
+
+  #level {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+  }
+  .roundButton{
+    border: 1px solid white;
+    border-radius: 100px;
+  }
+  .icon{
+    display: none;
+  }
+}
+@media all and (max-width: 499px) {
+  body {
+    width: 100%;
+    max-width: 499px;
+    min-width: 400px;
+    font-size: 80%;
+  }
+  #level {
+    display: none;
+  }
+  .gameIcon{
+    display: none;
+  }
+  .roundButton{
+    margin: 0;
+    border: 1px solid white;
+    border-radius: 100px;
+  }
+  #name{
+    margin:0;
+  }
+  #play{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+}

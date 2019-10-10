@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5d8af8b21b.js"></script>
+    <title>Assignment 2 by Cheng Gui He</title>
+    <link rel="stylesheet" href="../css/a2.css" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1 class="subHerder"><span class="yellow">Emoji</span> Math Game</h1>
+    </header>
+    <div class="gameIcon">
+      <i class="far fa-grin-squint-tears yellow subIconTop"></i>
+    </div>
+    <section id="infoBox">
+      <form class="form" action="index.html" method="post">
+        <label class="roundButton blue thinBorder" id="name">name</label>
+        <input type="text" name="playerName" value="" class="roundButton inputBox" id="playersName">
+        <label> Age </label>
+        <select id="playersAge">
+            <option value="7"> 7 </option>
+            <option value="8"> 8 </option>
+            <option value="9"> 9 </option>
+            <option value="10"> 10 </option>
+            <option value="11"> 11 </option>
+            <option value="12"> 12 </option>
+        </select>
+        <a href="addGame.html" class="roundButton blue thinBorder" id="play" onclick="saveData()">play</a>
+      </form>
+    </section>
+    <div class="gameIcon">
+      <i class="far fa-grin-beam red subIconBot" ></i>
+    </div>
+  </body>
+
+  <script href="" type="text/javascript">
+      let saveData =() =>{
+        let playersName=document.querySelector("#playersName").value;
+        localStorage.setItem("playersName",playersName);
+        let playersAge=document.querySelector("#playersAge").value;
+        localStorage.setItem("playersAge",playersAge);
+
+        localStorage.setItem("level3Miss", 0);
+        localStorage.setItem("getSubMiss", 0);
+        localStorage.setItem("getMiss", 0);
+        localStorage.setItem("level3Hit", 0);
+        localStorage.setItem("getSubHit", 0);
+        localStorage.setItem("getHit", 0);
+        localStorage.setItem("FinalScore", 0);
+        localStorage.setItem("level3Miss", 0);
+        localStorage.setItem("level3Miss", 0);
+        localStorage.setItem("getScores", 0);
+        localStorage.setItem("getSubScores", 0);
+      }
+  </script>
+</html>
